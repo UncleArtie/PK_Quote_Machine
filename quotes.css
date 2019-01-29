@@ -1,0 +1,81 @@
+body {
+  background-color: tan;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "h h h h" "s s s s" "c c c c" "c c c c" "c c c c" "f f f f";
+  grid-gap: 1rem;
+}
+
+.header {
+  grid-area: h;
+}
+
+.subheader {
+  grid-area: s;
+}
+
+.content {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+}
+
+h1 {
+  font-family: Arial, Helvetica, Times New Roman;
+  text-align: center;
+}
+
+h2 {
+  font-family: Arial, Helvetica, Times New Roman;
+  text-align: center;
+}
+
+p {
+  font-size: large;
+  text-align: center;
+  margin: 20px;
+}
+
+#quoteBox {
+  height: 300px;
+  width: 600px;
+  margin: auto;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 10px;
+  grid-area: c;
+}
+
+#quoted {
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: larger;
+}
+
+#pushQuote {
+  color: black;
+  font-weight: strong;
+  padding: 5px;
+  border-radius: 10px;
+  margin: auto;
+  grid-row: 5;
+  grid-column: 3;
+}
+
+#tweet {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+  grid-row: 5;
+  grid-column: 2;
+}
