@@ -1,5 +1,5 @@
 body {
-  background-color: tan;
+  background-color: lightskyblue;
 }
 
 .container {
@@ -7,7 +7,7 @@ body {
   width: 100%;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
-  grid-template-areas: "h h h h" "s s s s" "c c c c" "c c c c" "c c c c" "f f f f";
+  grid-template-areas: "h h h h""s s s s""c c c c""c c c c""c c c c""f f f f";
   grid-gap: 1rem;
 }
 
