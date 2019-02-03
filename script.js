@@ -3,7 +3,7 @@ window.onload = function () {
     .getElementById("pushQuote")
     .addEventListener("click", pushQuoteClick, false);
 
- var newLocal = "demo";
+  var newLocal = "demo";
 
   function pushQuoteClick() {
     var useQuotes = [
@@ -379,13 +379,13 @@ window.onload = function () {
 
     function fadeIn() {
       var el = document.getElementById("quoted");
-      el.style.opacity = 0;
-  
+      el.style.opacity = "0";
+
       var last = +new Date();
       var tick = function () {
         el.style.opacity = +el.style.opacity + (new Date() - last) / 4000;
         last = +new Date();
-  
+
         if (+el.style.opacity < 1) {
           (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
         }
