@@ -1,9 +1,7 @@
 window.onload = function () {
   document
     .getElementById("pushQuote")
-    .addEventListener("click", pushQuoteClick, false);
-
-  var newLocal = "demo";
+    .addEventListener("click", pushQuoteClick, true);
 
   function pushQuoteClick() {
     var useQuotes = [
@@ -393,10 +391,12 @@ window.onload = function () {
       tick();
     }
     fadeIn();
-
-    document.getElementById("tweet").addEventListener("click", function tweetIt() {
-      var randomNumber = Math.floor(Math.random() * (useQuotes.length));
-      window.open("https://twitter.com/intent/tweet?text=" + useQuotes[useQuote]);
-    });
   }
+  document.getElementById("tweet").addEventListener("click", function tweetIt() {
+    var tweetButton = "https://twitter.com/share?text=";
+    var tweetQuote = document.getElementById("quoted").innerText;
+    window.open(tweetButton + tweetQuote);
+  });
+
+
 };
