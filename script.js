@@ -11,7 +11,7 @@ window.onload = function () {
       'Puffin shook his head sadly. No sale today.',
       '"We sharpened our cricket bats into swords," Woolly Bat said, "and sailed off to war."',
       'Maltese worried about the wind.  The wind that always brings the dust.',
-      "Pig was happy with his quorum; the Goat would have to go.",
+      "Pig was happy with his quorum. The Goat would have to go.",
       '"Are we not men?" Mouse roared upon the gathering crowd.',
       "Mole blinked furiously in the rain and thought, I should have brought an umbrella to the bus station.",
       'Boat becalmed for days, posited by the gunwales, Owl and Fox finally leveled with each other. "That leg is getting a bit gamy, isn\'t it?"',
@@ -391,12 +391,11 @@ window.onload = function () {
       tick();
     }
     fadeIn();
-  }
-  document.getElementById("tweet").addEventListener("click", function tweetIt() {
-    var tweetButton = "https://twitter.com/share?text=";
-    var tweetQuote = document.getElementById("quoted").innerText;
-    window.open(tweetButton + tweetQuote);
-  });
 
+    document.getElementById("tweet").addEventListener("click", function () {
+      var toTweet = document.getElementById("quoted").innerHTML;
+      var tweetQuote = document.getElementById('twitterShare').href = "https://twitter.com/intent/tweet/?text=" + toTweet;
+    });
+  }
 
 };
